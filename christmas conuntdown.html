@@ -1,0 +1,36 @@
+<doctype html>
+<html lang= en>
+<head>
+
+	<meta charset="utf-8">
+	<title>Christmas countdown</title>
+	
+</head>
+<style>
+	body{
+		background-image: url("choinka.png");
+		background-size: cover;     
+		background-repeat: no-repeat; 
+		background-position: center; }
+</style>
+<body onload="countdown();">
+<center>
+	<h1>The are<h1>
+	<h1><div id="odliczanie"></div><h1>
+
+	<script type="text/javascript">
+		function countdown()
+		{
+			let data = new Date();
+			let dzien = data.getDate();
+			let godzina = data.getHours();
+			let minuta = data.getMinutes();
+			let sekunda = data.getSeconds();
+			document.getElementById("odliczanie").innerHTML = (25-dzien) +" days "+ (24-godzina) +" hours "+ (60-minuta) +" minutes and "+ (60-sekunda)+ " seconds"
+			setTimeout(countdown, 1000);
+		}
+	</script>
+	<h1>To Christmas<h1>
+</center>
+</body>
+</html>
